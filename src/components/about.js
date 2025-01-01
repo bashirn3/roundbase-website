@@ -8,7 +8,7 @@ import AwardBadge from "../images/award-badge.svg";
 const About = () => {
   const data = useStaticQuery(graphql`
     {
-      aboutimage: file(relativePath: { eq: "about-image2.jpg" }) {
+      aboutimage: file(relativePath: { eq: "about3.jpg" }) {
         childImageSharp {
           gatsbyImageData(
             height: 800
