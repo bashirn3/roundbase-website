@@ -7,11 +7,9 @@ import CtaButton from "../images/cta-button.svg";
 const Hero = () => {
   const data = useStaticQuery(graphql`
     {
-      heroimage: file(relativePath: { eq: "hero-image2.jpg" }) {
+      heroimage: file(relativePath: { eq: "hero2.jpg" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 5120
-            height: 2000
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
@@ -34,7 +32,9 @@ const Hero = () => {
       </div>
       <div className="relative">
         <div className="relative">
-          <GatsbyImage image={getImage(data.heroimage)} alt="Hero Image" />
+          <GatsbyImage image={getImage(data.heroimage)} alt="Hero Image"  style={{
+            objectFit: "con"
+          }}/>
           <div
             className="absolute inset-0"
             style={{ backgroundColor: "#506770", opacity: 0.2 }}
